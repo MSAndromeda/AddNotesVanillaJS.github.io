@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/dist/output.css">
+    <title>Notes App</title>
+</head>
+
+<body class="bg-rose-800">
+    <nav>
+        <!-- This is Nevigation Bar -->
+        <div class="flex item-center justify-between px-2 py-2 bg-rose-900 text-white">
+            <div class="">Magic Notes</div>
+            <div class="">Ham</div>
+        </div>
+    </nav>
+    <div class="bg-rose-800 flex justify-center">
+        <div class="h-auto w-[95%] md:w-9/12 flex-col items-center justify-center p-2 text-white">
+            <div class="text-2xl">
+                <h1>Welcome To Magic Notes</h1>
+            </div>
+            <div class="py-6 px-3">
+                <div class="">Add A Notes</div>
+                <div class="h-auto w-full">
+                    <textarea name="AddNote" id="Addtxt" cols="auto" rows="auto" class="bg-rose-600 p-2 w-full h-auto"></textarea>
+                </div>
+                <button id="Addbtn" class="bg-rose-700 px-2 py-1 rounded-md hover:bg-rose-600">Add Note</button>
+            </div>
+            <div class="bg-rose-900 py-[1px]"></div>
+            <div class="text-2xl py-2">
+                <h2>Your Notes</h2>
+            </div>
+            <div class="bg-rose-900 py-[1px]"></div>
+            <div class="py-6 px-3 flex-col sm:flex-row" id="notehere">
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
