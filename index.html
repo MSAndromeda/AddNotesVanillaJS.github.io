@@ -8,7 +8,7 @@
     <link rel="apple-touch-icon" sizes="180x180" href="Fav/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="Fav/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="Fav/favicon-16x16.png">
-    <link rel="manifest" href="/site.webmanifest">
+    <!-- <link rel="manifest" href="/site.webmanifest"> -->
     <link rel="stylesheet" href="dist/output.css">
     <title>Notes App</title>
 </head>
@@ -29,7 +29,12 @@
             <div class="py-6 px-3">
                 <div class="">Add A Notes</div>
                 <div class="h-auto w-full">
-                    <textarea name="AddNote" id="Addtxt" cols="auto" rows="auto" class="bg-rose-600 p-2 w-full h-auto"></textarea>
+                    <!-- Add Title Start -->
+                    <textarea name="NoteTitle" id="TAddtit" cols="auto" rows="1" class="bg-rose-600 p-2 w-full h-auto placeholder:text-rose-200" placeholder="Title"></textarea>
+                    <!-- Add Title End -->
+                    <!-- Add Note Start -->
+                    <textarea name="AddNote" id="Addtxt" cols="auto" rows="auto" class="bg-rose-600 p-2 w-full h-auto placeholder:text-rose-200" placeholder="Your Note here..."></textarea>
+                    <!-- Add Note End -->
                 </div>
                 <button id="Addbtn" class="bg-rose-700 px-2 py-1 rounded-md hover:bg-rose-600">Add Note</button>
             </div>
@@ -39,6 +44,7 @@
             </div>
             <div class="bg-rose-900 py-[1px]"></div>
             <div class="py-6 px-3 flex-col sm:flex-row" id="notehere">
+                <!-- Notes of the User Gets Stored Here -->
             </div>
         </div>
     </div>
