@@ -7,15 +7,21 @@ let addBtn = document.getElementById('Addbtn');
 // Function to add The Given Text in Local Storage to Form a Note
 addBtn.addEventListener('click', function() {
     let addTxt = document.getElementById('Addtxt');
+    let addTitle = document.getElementById('AddTitle');
     let Notes = localStorage.getItem('Notes');
     if (Notes == null) {
         notesObj = [];
     } else {
         notesObj = JSON.parse(Notes);
     }
-    notesObj.push(addTxt.value);
+    let myObj = {
+        title: addTitle.value,
+        text: addTxt.value
+    }
+    notesObj.push(myObj);
     localStorage.setItem("Notes", JSON.stringify(notesObj));
     addTxt.value = "";
+    addTitle.value = "";
     showNotes();
 });
 
@@ -32,7 +38,8 @@ function showNotes() {
         html += `
         <div class="border-[1px] border-rose-400 p-2 my-2 sm:mx-2 sm:inline-block sm:w-56">
             <h3>Note ${index+1}</h3>
-            <div class="text-sm my-1">${element}</div>
+            <div class="text-2xl font-semibold my-1">${element.title}</div>
+            <div class="text-sm my-1">${element.text}</div>
             <button id="${index}" onclick="DeleteNote(this.id)" class="bg-rose-700 px-[4px] py-[2px] rounded-md hover:bg-rose-600 text-xs">Delete Note</button>
         </div>`;
     });
